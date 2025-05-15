@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partner with Us page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-pane">
+      <h1>WELCOME</h1>
+      <p>Trailblazers Collective Making the World a better dwelling for all</p>
+    </div>
+    <div class="right-pane">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('login')">Please Login</button>
+        <button class="tab" onclick="switchTab('register')">Register Here</button>
+      </div>
+
+      <div id="login-form" class="form active">
+        <input type="text" placeholder="Member Id" />
+        <input type="password" placeholder="Password" />
+        <button class="btn-login">Login</button>
+        <a href="#">Reset Password?</a>
+        <div class="separator">OR</div>
+        <button class="btn-otp">Request OTP</button>
+        <p class="note">
+          If you are BSG member, click on this
+
+          <a href="#">WhatsApp link</a> and follow the process to get your Member Id.<br />
+          New User? <a href="#">Register Here</a>
+        </p>
+      </div>
+
+      <div id="register-form" class="form">
+        <p>Registration form coming soon...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

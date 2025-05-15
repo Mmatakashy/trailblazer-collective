@@ -1,17 +1,8 @@
-// Function to scroll to different sections smoothly
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    window.scrollTo({
-        top: section.offsetTop - 60, // Adjust for header height
-        behavior: 'smooth'
-    });
-
 function switchTab(tab) {
   const loginForm = document.getElementById('login-form');
   const registerForm = document.getElementById('register-form');
   const tabs = document.querySelectorAll('.tab');
 
-  // Reset tabs
   tabs.forEach(t => t.classList.remove('active'));
 
   if (tab === 'login') {
@@ -22,5 +13,5 @@ function switchTab(tab) {
     registerForm.classList.add('active');
     loginForm.classList.remove('active');
     tabs[1].classList.add('active');
-  });
+  }
 }
