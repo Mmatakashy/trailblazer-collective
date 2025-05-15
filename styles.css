@@ -57,7 +57,7 @@ header .logo h1 {
 }
 
 .logo-img {
-    height: 2.5rem; /* Adjust based on how big you want the logo */
+    height: 2.8rem; /* Adjust based on how big you want the logo */
     width: auto;
 }
 
@@ -68,7 +68,7 @@ header nav {
 
 header nav a {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
     position: relative;
