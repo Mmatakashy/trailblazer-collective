@@ -23,4 +23,5 @@ function switchTab(tab) {
     loginForm.classList.remove('active');
     tabs[1].classList.add('active');
   });
+
 }
