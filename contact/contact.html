@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Trailblazers Collective</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans leading-relaxed">
+
+  <!-- Hero Section -->
+  <section class="bg-green-700 text-white py-16">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Contact Us</h1>
+      <p class="mt-4 text-lg">We’d love to hear from you. Reach out anytime.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container mx-auto px-4 py-12 max-w-6xl">
+    <div class="grid md:grid-cols-2 bg-white rounded-lg shadow-lg overflow-hidden">
+
+      <!-- Left: Image with Contact Info -->
+      <div class="relative h-96 md:h-auto bg-cover bg-center" style="background-image: url('https://source.unsplash.com/600x800/?charity,help');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-8 text-white">
+          <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
+          <p class="mb-3"><strong>Email:</strong> contact@trailblaers.org</p>
+          <p class="mb-3"><strong>Phone:</strong> +254 712 345 678</p>
+          <p class="mb-3"><strong>Working Hours:</strong><br>Mon - Fri, 9:00am - 5:00pm</p>
+          <p><strong>We usually respond within 24 hours.</strong></p>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="p-8">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-700">Send us a message</h2>
+       <form class="space-y-4">
+         <input type="text" name="name" placeholder="Your Name" required class="w-full border p-3 rounded" />
+         <input type="email" name="email" placeholder="Your Email" required class="w-full border p-3 rounded" />
+         <textarea name="message" placeholder="Your Message" required class="w-full border p-3 rounded h-32"></textarea>
+         <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700">Send Message</button>
+       </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-6 mt-12">
+    <p>&copy; 2025 Trailblazers. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
