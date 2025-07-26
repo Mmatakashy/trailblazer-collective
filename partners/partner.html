@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Partner With Us - Trailblazers Collective</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #004080;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    input[type="radio"], input[type="number"] {
+      margin-right: 10px;
+    }
+
+    .custom {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn {
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #003366;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .modal button {
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Partner With Us Monthly</h2>
+
+  <form id="partnerForm">
+    <table>
+      <tr>
+        <td><input type="radio" name="amount" value="10">USD 10</td>
+        <td><input type="radio" name="amount" value="25">USD 25</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="amount" value="50">USD 50</td>
+        <td><input type="radio" name="amount" value="100">USD 100</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="custom">
+          <input type="radio" name="amount" value="custom" id="customRadio">
+          <input type="number" id="customAmount" placeholder="Enter custom amount (USD)">
+        </td>
+      </tr>
+    </table>
+
+    <button type="button" class="btn" onclick="showModal()">Click to Partner With Us</button>
+  </form>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="paymentModal">
+  <div class="modal-content">
+    <h3>Select Payment Option</h3>
+    <button class="btn" onclick="redirectTo('paypal')">PayPal</button>
+    <button class="btn" onclick="redirectTo('mpesa')">M-PESA</button>
+    <button class="btn" onclick="redirectTo('credit')">Credit Card</button>
+  </div>
+</div>
+
+<!-- PayPal form (auto-submitted when selected) -->
+<form id="paypalForm" action="https://www.paypal.com/donate" method="post" target="_blank" style="display:none;">
+  <input type="hidden" name="business" value="mosesmmata70@gmail.com">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="hidden" name="amount" id="paypalAmount" value="">
+</form>
+
+<script>
+  function showModal() {
+    const radios = document.querySelectorAll('input[name="amount"]');
+    let selected = false;
+    for (const radio of radios) {
+      if (radio.checked) {
+        selected = radio.value;
+        break;
+      }
+    }
+
+    const customRadio = document.getElementById("customRadio");
+    const customAmount = document.getElementById("customAmount").value;
+    if (customRadio.checked && (!customAmount || isNaN(customAmount))) {
+      alert("Please enter a valid custom amount.");
+      return;
+    }
+
+    if (!selected) {
+      alert("Please select or enter an amount to give.");
+      return;
+    }
+
+    document.getElementById("paymentModal").style.display = "flex";
+  }
+
+  function redirectTo(method) {
+    let amount = document.querySelector('input[name="amount"]:checked').value;
+    if (amount === "custom") {
+      amount = document.getElementById("customAmount").value;
+    }
+
+    if (!amount || isNaN(amount) || amount <= 0) {
+      alert("Invalid donation amount.");
+      return;
+    }
+
+    // Optional: Send to backend for logs
+    fetch("log_donation.php", {
+      method: "POST",
+      body: new URLSearchParams({ amount, method })
+    });
+
+    if (method === "paypal") {
+      document.getElementById('paypalAmount').value = amount;
+      document.getElementById('paypalForm').submit();
+    } else if (method === "mpesa") {
+      window.location.href = `mpesa-stk.html?amount=${encodeURIComponent(amount)}`;
+    } else if (method === "credit") {
+      window.location.href = `credit-card.html?amount=${encodeURIComponent(amount)}`;
+    }
+  }
+</script>
+
+</body>
+</html>

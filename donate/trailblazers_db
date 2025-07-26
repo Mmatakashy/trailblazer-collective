@@ -1,0 +1,12 @@
+CREATE DATABASE trailblazers_collective;
+
+USE trailblazers_collective;
+
+CREATE TABLE donations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  message TEXT,
+  donation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

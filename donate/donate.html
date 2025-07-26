@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate - Trailblazers Collective</title>
+  <link rel="stylesheet" href="donate.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">Trailblazers Collective</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Current Projects</a></li>
+        <li><a href="stories.html">Impact Stories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="donate-section">
+      <h1>Support Our Mission</h1>
+      <p>Your donation helps us empower communities and change lives.</p>
+
+      <form id="donate-form" action="process_donation.php" method="POST">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="amount">Donation Amount (KES) *</label>
+        <input type="number" id="amount" name="amount" required />
+
+        <label for="message">Message (Optional)</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Donate Now</button>
+      </form>
+      <div class="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-xl">
+  <p class="text-gray-700 mb-4">
+    Trail Blazers is made possible by the support of individual people, just like you! Join alumni, family, and friends of Trail Blazers in helping ensure children have access to programs.
+    If you would like to support a specific program, <p> such as community health evangelism (CHE Kenya),</p>  <p>women's abuse recovery (ARMS Kenya),</p><p>Business as missiona and Youth Empowerment</p>
+    <p><a href="#" class="text-green-600 font-semibold underline">Student and Pupils Scholarships</a>,</p>
+    please contact Davida Joy and Frank Musakali at <a href="mailto:connect@Trailblazerscollective.org" class="text-blue-600">connect@Trailblazerscollective.org</a>.
+  </p>
+
+  <!-- Frequency Toggle -->
+  <div class="flex space-x-2 mb-4">
+    <button class="frequency-btn bg-green-700 text-white px-4 py-2 rounded-md" onclick="setFrequency('one-time')">One Time</button>
+    <button class="frequency-btn bg-gray-100 text-gray-800 px-4 py-2 rounded-md" onclick="setFrequency('monthly')">Monthly</button>
+  </div>
+
+  <!-- Preset Amounts -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+    <button class="amount-btn bg-green-700 text-white py-2 rounded" onclick="selectAmount(50)">$50</button>
+    <button class="amount-btn bg-gray-100 py-2 rounded" onclick="selectAmount(100)">$100</button>
+    <button class="amount-btn bg-gray-100 py-2 rounded" onclick="selectAmount(500)">$500</button>
+    <button class="amount-btn bg-gray-100 py-2 rounded" onclick="selectAmount(1000)">$1000</button>
+  </div>
+
+  <!-- Custom Amount -->
+  <input id="customAmount" type="number" placeholder="Enter custom amount" class="w-full border border-gray-300 p-2 rounded mb-4" oninput="updateDonateLabel(this.value)">
+
+  <!-- Dedication Field -->
+  <label class="flex items-center mb-4 space-x-2">
+    <input type="checkbox" class="h-4 w-4 text-green-600 border-gray-300" id="dedicateToggle">
+    <span class="text-gray-700 text-sm">Dedicate This Gift</span>
+  </label>
+
+  <!-- Donate Button -->
+  <button id="donateBtn" class="w-full bg-green-700 text-white font-semibold py-3 rounded">Donate $50</button>
+</div>
+
+<script>
+  let selectedAmount = 50;
+  let selectedFrequency = "one-time";
+
+  function selectAmount(amount) {
+    selectedAmount = amount;
+    document.getElementById('customAmount').value = '';
+    updateButtons(amount);
+    updateDonateLabel(amount);
+  }
+
+  function updateButtons(activeAmount) {
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+      btn.classList.remove('bg-green-700', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-black');
+      if (btn.innerText.includes(`$${activeAmount}`)) {
+        btn.classList.add('bg-green-700', 'text-white');
+      }
+    });
+  }
+
+  function updateDonateLabel(amount) {
+    const value = amount || selectedAmount;
+    document.getElementById('donateBtn').innerText = `Donate $${value}`;
+  }
+
+  function setFrequency(type) {
+    selectedFrequency = type;
+    document.querySelectorAll('.frequency-btn').forEach(btn => {
+      btn.classList.remove('bg-green-700', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-gray-800');
+    });
+    event.target.classList.add('bg-green-700', 'text-white');
+  }
+</script>
+
+      <div class="payment-options">
+        <h2>Other Ways to Give</h2>
+        <button onclick="window.location.href='https://www.paypal.com/donate'">Donate via PayPal</button>
+        <button onclick="window.location.href='m-pesa-instructions.html'">Donate via M-PESA</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Trailblazers Collective</p>
+    <p>Contact us: connect@trailblazerscollective.org | +254 700 000000</p>
+  </footer>
+
+</body>
+</html>

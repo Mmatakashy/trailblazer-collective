@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fcd703;
+}
+
+/* Donate Section */
+.donate-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.donate-section h1 {
+  text-align: center;
+  color: #004080;
+}
+
+.donate-section p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003060;
+}
+
+/* Payment Options */
+.payment-options {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.payment-options h2 {
+  margin-bottom: 1rem;
+}
+
+.payment-options button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #fcd703;
+  color: #004080;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.payment-options button:hover {
+  background-color: #e6c200;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #004080;
+  color: white;
+  margin-top: 2rem;
+}

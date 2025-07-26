@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card Donation – Trailblazers Collective</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Donate by Credit Card</h2>
+    <form action="process_credit.php" method="POST" class="card-form">
+      <label>Amount (KES)</label>
+      <input type="number" name="amount" id="ccAmount" required>
+
+      <label>Card Number</label>
+      <input type="text" name="card_number" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
+
+      <label>Expiration</label>
+      <input type="text" name="expiry" pattern="\d{2}/\d{2}" placeholder="MM/YY" required>
+
+      <label>CVV</label>
+      <input type="text" name="cvv" pattern="\d{3}" placeholder="123" required>
+
+      <button type="submit" class="btn">Donate KES <span id="ccDisplay">0</span></button>
+    </form>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount') || '';
+    document.getElementById('ccAmount').value = amount;
+    document.getElementById('ccDisplay').innerText = amount;
+    document.getElementById('ccAmount').addEventListener('input', (e) => {
+      document.getElementById('ccDisplay').innerText = e.target.value;
+    });
+  </script>
+</body>
+</html>

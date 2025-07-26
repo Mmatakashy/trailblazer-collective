@@ -5,7 +5,6 @@ function scrollToSection(sectionId) {
         top: section.offsetTop - 60, // Adjust for header height
         behavior: 'smooth'
     });
-}
 
 function switchTab(tab) {
   const loginForm = document.getElementById('login-form');
@@ -23,5 +22,6 @@ function switchTab(tab) {
     registerForm.classList.add('active');
     loginForm.classList.remove('active');
     tabs[1].classList.add('active');
-  }
+  });
+
 }
