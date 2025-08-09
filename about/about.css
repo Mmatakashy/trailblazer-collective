@@ -1,0 +1,188 @@
+/* Modern gradient background for whole page */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #dbeafe, #e0f2fe, #f0f9ff);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #333;
+}
+
+/* Smooth animated gradient effect */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  background: rgba(44, 62, 80, 0.9);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('your-image.jpg') no-repeat center/cover;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 800px; /* limit height */
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h2 {
+  font-size: clamp(2rem, 6vw, 8rem); /* larger responsive font */
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: clamp(1.2rem, 3vw, 4rem); /* bigger paragraph text */
+}
+
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+  text-align: center;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background-color: rgba(255,255,255,0.85);
+  border: none;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;   /* keeps corners slightly rounded but not circular */
+  object-fit: cover;    /* ensures the image fits neatly without distortion */
+  margin-bottom: 15px;
+  border: 3px solid #1e3a8a;
+}
+
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-left: 5px solid #2c3e50;
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-img {
+  width: 140px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #2c3e50;
+  border-radius: 8px; /* Slightly rounded corners, not a circle */
+  flex-shrink: 0;
+}
+
+
+.testimonial-text {
+  flex: 1;
+}
+
+.testimonial p {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimonial-img {
+    margin-bottom: 10px;
+  }
+}

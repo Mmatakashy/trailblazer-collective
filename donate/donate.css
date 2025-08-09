@@ -1,23 +1,38 @@
-/* General Styles */
-body {
+/* =====================
+   Global Reset & Fonts
+===================== */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #e0f7fa);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =====================
+   Navbar
+===================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #004080;
-  padding: 1rem 2rem;
-  color: white;
+  padding: 1rem 3rem;
+  background: #004d40;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
+  font-weight: 700;
   font-size: 1.5rem;
-  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -27,92 +42,250 @@ body {
 }
 
 .nav-links a {
+  color: #fff;
+  font-weight: 500;
   text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #fcd703;
+  color: #ffca28;
 }
 
-/* Donate Section */
+/* =====================
+   Donation Section
+===================== */
 .donate-section {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 5px;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: #ffffffcc;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 .donate-section h1 {
   text-align: center;
-  color: #004080;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #004d40;
+  margin-bottom: 0.8rem;
 }
 
 .donate-section p {
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #555;
 }
 
+/* =====================
+   Compact Form Styling
+===================== */
 form {
+  display: grid;
+  gap: 0.9rem; /* smaller spacing between elements */
+  max-width: 600px; /* reduce overall form width */
+  margin: 0 auto; /* center form */
+}
+
+form label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #555;
+  letter-spacing: 0.3px;
+}
+
+form input,
+form textarea {
+  padding: 0.6rem 0.9rem; /* reduce padding */
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 0.9rem; /* slightly smaller font */
+  background: #fdfdfd;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 4px rgba(0, 121, 107, 0.15);
+  outline: none;
+}
+
+textarea {
+  min-height: 80px; /* smaller default height */
+  resize: vertical;
+}
+
+/* =====================
+   Compact Buttons
+===================== */
+button,
+.primary-btn,
+.secondary-btn {
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  background: #00796b;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #004d40;
+}
+
+.secondary-btn {
+  background: #f7f7f7;
+  color: #444;
+}
+
+.secondary-btn:hover {
+  background: #e5e5e5;
+}
+
+/* =====================
+   Frequency Toggle
+===================== */
+.frequency-toggle {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-label {
-  margin-top: 1rem;
+.frequency-btn {
+  flex: 1;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  background: #f1f1f1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-input, textarea {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button {
-  margin-top: 1.5rem;
-  padding: 0.75rem;
-  background-color: #004080;
+.frequency-btn.active {
+  background: #00796b;
   color: white;
+}
+
+/* =====================
+   Amount Buttons
+===================== */
+.preset-amounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.amount-btn {
+  padding: 0.85rem;
+  border-radius: 8px;
+  background: #f1f1f1;
   border: none;
-  border-radius: 3px;
   cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-button:hover {
-  background-color: #003060;
+.amount-btn.active {
+  background: #00796b;
+  color: white;
 }
 
-/* Payment Options */
-.payment-options {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.payment-options h2 {
-  margin-bottom: 1rem;
-}
-
-.payment-options button {
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #fcd703;
-  color: #004080;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.payment-options button:hover {
-  background-color: #e6c200;
-}
-
-/* Footer */
+/* =====================
+   Footer
+===================== */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #004080;
+  background: #004d40;
   color: white;
-  margin-top: 2rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #ffca28;
+  text-decoration: none;
+}
+
+/* Modal hidden by default */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.payment-btn {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.payment-btn:hover {
+  transform: scale(1.05);
+}
+
+.paypal-btn {
+  background: #003087;
+  color: white;
+}
+
+.mpesa-btn {
+  background: #34b233;
+  color: white;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Hide modal trigger elements on small screens until clicked */
+@media (max-width: 768px) {
+  #payment-modal {
+    display: none;
+  }
 }

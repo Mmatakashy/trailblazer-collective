@@ -24,4 +24,15 @@ function switchTab(tab) {
     tabs[1].classList.add('active');
   });
 
+  const track = document.querySelector('.news-track');
+const slider = document.querySelector('.news-slider');
+
+slider.addEventListener('mouseenter', () => {
+  track.style.animationPlayState = 'paused';
+});
+
+slider.addEventListener('mouseleave', () => {
+  track.style.animationPlayState = 'running';
+});
+
 }

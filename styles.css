@@ -55,11 +55,20 @@ header .logo h1 {
     align-items: center;
     gap: 0.5rem;
 }
-
 .logo-img {
-    height: 2.8rem; /* Adjust based on how big you want the logo */
-    width: auto;
+    height: 3rem; /* slightly larger for clarity */
+    width: 3rem;  /* force equal width and height */
+    object-fit: cover; /* ensures the image fills the circle without distortion */
+    border-radius: 50%; /* makes it round */
+    border: 2px solid #fff; /* optional: adds a modern white border */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* soft shadow for a modern touch */
+    transition: transform 0.3s ease; /* smooth hover animation */
 }
+
+.logo-img:hover {
+    transform: scale(1.05); /* slight zoom on hover for interactivity */
+}
+
 
 header nav {
     display: flex;
@@ -96,83 +105,79 @@ header nav a:hover::after {
 }
 /* News Bar */
 .news-bar {
-    background-color: #E67E22;
-    color: white;
-    padding: 0.5rem 5cm;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 3px solid #D35400;
-  }
+  background-color: #E67E22;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-bottom: 3px solid #D35400;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-track {
+  display: flex;
+  width: max-content;
+  animation: slide 15s linear infinite;
+}
+
+.news-item {
+  min-width: 100%;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+}
+
+.news-bar i {
+  font-size: 1.2em;
+  animation: speaker-pulse 1s infinite;
+  color: #fff;
+}
+
+.news-popup-sup {
+  position: relative;
+  top: -0.3em;
+  font-size: 0.7em;
+  background-color: #ff004c;
+  color: white;
+  padding: 2px 6px;
+  margin: 0 4px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: blink-color-pulse 1.2s infinite;
+  box-shadow: 0 0 6px #ff004c;
+}
+
+/* Animations */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  63% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  96% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes speaker-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes blink-color-pulse {
+  0%, 100% { opacity: 1; background-color: #ff004c; }
+  50% { opacity: 0.6; background-color: #ff3366; }
+}
   
-  .news-content {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .news-bar i {
-    margin-left: 0.5rem;
-    font-size: 1.2em;
-    animation: speaker-pulse 1s infinite;
-    color: #fff;
-  }
-  
-  .news-item {
-    position: relative;
-    display: inline-block;
-    padding: 0 1.5rem;
-  }
-  
-  /* News popup superscript blinking + pulsing + color alternating */
-  .news-popup-sup {
-    position: relative;
-    top: -0.8em;
-    font-size: 0.7em;
-    background-color: #ff004c;
-    color: white;
-    padding: 2px 6px;
-    margin: 0 4px;
-    border-radius: 5px;
-    font-weight: bold;
-    animation: blink-color-pulse 1.2s infinite;
-    box-shadow: 0 0 6px #ff004c;
-  }
-  
-  /* Blinking between two colors with pulse */
-  @keyframes blink-color-pulse {
-    0% {
-      opacity: 1;
-      transform: scale(1);
-      background-color: #ff004c;
-      box-shadow: 0 0 6px #ff004c;
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(1.2);
-      background-color: #FFD700; /* Yellow */
-      box-shadow: 0 0 10px #FFD700;
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-      background-color: #ff004c;
-      box-shadow: 0 0 6px #ff004c;
-    }
-  }
-  
-  /* Speaker pulsing animation */
-  @keyframes speaker-pulse {
-    0%, 100% {
-      transform: scale(1);
-      color: #fff;
-    }
-    50% {
-      transform: scale(1.3);
-      color: #FFD700;
-    }
-  }
   
   
 /* CTA Button Styling */
@@ -227,12 +232,12 @@ header nav a:hover::after {
     z-index: 1;
 }
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -244,12 +249,12 @@ header nav a:hover::after {
 }
 
 .mission h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.25rem;
 }
 
 .mission p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -263,6 +268,7 @@ header nav a:hover::after {
 }
 
 .impactful-leaders h2 {
+   margin-top: 40px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: #fff;
@@ -287,14 +293,20 @@ header nav a:hover::after {
 
 .leader-item img {
     width: 100%;
-    border-radius: 10px;
+    max-height: 250px; /* Increase/decrease based on your layout */
+    border-radius: 15px;
     margin-bottom: 1rem;
-    object-fit: cover;
-    height: 200px;
+
+    object-fit: contain;   /* Ensures full picture is shown */
+    object-position: center; /* Keeps image centered */
+    
+    background-color: #f4f4f4; /* optional: subtle background in case of empty space */
+    padding: 5px; /* optional: gives breathing room */
 }
 
+
 .leader-item p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.6;
     color: #fff;
 }
@@ -329,16 +341,16 @@ header nav a:hover::after {
 
 .program-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .program-card p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
 .program-card .cta-btn {
-  background-color: #16A085;
+  background-color: #04625c;
 }
 
 .program-card .cta-btn:hover {
@@ -365,6 +377,103 @@ header nav a:hover::after {
   box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
 }
 
+/* ===== CTA Button (Learn More) ===== */
+.cta-btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.3rem;
+
+  /* Visuals (Trailblazers palette) */
+  background: linear-gradient(135deg, #1e6959, #0e3947);
+  color: #fff;
+  border: 0;
+  border-radius: 12px;
+
+  /* Typography */
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+
+  /* Effects */
+  box-shadow: 0 10px 18px rgba(14, 57, 71, 0.25);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 220ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer highlight on hover */
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255,255,255,0.18) 40%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 500ms ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(14, 57, 71, 0.3);
+  background: linear-gradient(135deg, #0e3947, #1e6959);
+}
+
+.cta-btn:hover::before {
+  transform: translateX(120%);
+}
+
+/* Active press feedback */
+.cta-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 14px rgba(14, 57, 71, 0.22);
+}
+
+/* Accessible focus ring */
+.cta-btn:focus-visible {
+  outline: 3px solid #f59842;  /* accent */
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(245, 152, 66, 0.25);
+}
+
+/* Optional arrow indicator */
+.cta-btn::after {
+  content: "↗";
+  font-size: 0.95em;
+  opacity: 0.85;
+  transform: translateY(1px);
+}
+
+/* Contrast variant (on dark backgrounds) */
+.cta-btn--light {
+  background: linear-gradient(135deg, #f59842, #9e1b33);
+  color: #fff;
+}
+
+/* Make the anchor target scroll nicely below sticky headers */
+html {
+  scroll-behavior: smooth;
+}
+#program-details {
+  scroll-margin-top: 80px; /* adjust if your header height differs */
+}
+
+/* Responsive sizing */
+@media (max-width: 640px) {
+  .cta-btn {
+    padding: 0.8rem 1.1rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+}
 
 
 /* Impact Stories Section */
