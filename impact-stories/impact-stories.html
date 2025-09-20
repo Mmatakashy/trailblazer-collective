@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="impact-stories.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<!-- Header will load here -->
+  <div id="header"></div>
 <body>
   <h1 class="page-title">Impact Stories</h1>
 
@@ -42,7 +44,7 @@
   </div>
   <!-- PHOTO COLUMN -->
   <div class="photo">
-    <img src="../images/silviawork.jpeg" alt="Impact Story">
+    <img src="../images/silvia.jpeg" alt="Impact Story">
     <p>Silvia</p>
   </div>
 </div>
@@ -52,14 +54,14 @@
   <div class="story">
   <!-- QUICK LINK COLUMN -->
   <div class="quick-link">
-    <h3 class="ql-title">Story #2</h3>
+    <h3 class="ql-title">Dorcus Testimony</h3>
 
     <!-- video in requested format -->
     <div class="video-item">
-      <video src="../videos/DORCUS (1).mp4" controls muted controlsList="nodownload" oncontextmenu="return false;">
+      <video src="../videos/DORCUS.mp4" controls muted controlsList="nodownload" oncontextmenu="return false;">
 </video>
 
-      <p>Short video of person X</p>
+      <p>Short impactful story of Dorcus</p>
     </div>
 
     <!-- social icons below video -->
@@ -88,8 +90,320 @@
 
 
   <!-- Add more stories here -->
+   <section class="testimonials">
+  <h2 class="testimonials-title"></h2>
+  <div class="testimonials-container">
+
+    <!-- Story Card -->
+    <div class="testimonial-card">
+      <img src="../images/Lydia.jpeg" alt="Lydia" class="testimonial-img">
+      <div class="testimonial-content">
+        <p class="testimonial-text">
+          “Before coming to TBC's women's class, I was fearful and withdrawn. I was broken-hearted from the personal problems of my life- in my marriage and finances. I did not see a value to my life or future. Through TBC's class, God has encouraged me so much! He has transformed my mind and given me confidence. Now I have joy and hope and I know God is showing me His way and giving me peace.”
+        </p>
+        <h3 class="testimonial-name">Lydia - 2025</h3>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="../images/rose.jpeg" alt="Rose" class="testimonial-img">
+      <div class="testimonial-content">
+        <p class="testimonial-text">
+          “Before I started coming to TBC's women's class, I was having serious disputes with my neighbors. I was angry and wanted to punish them for their attacks against me. My attitude had been mean and vengeful, but it changed when I began coming to class. My bitterness was removed. I now walk in kindness and confidence. I have learned how to give grace while also setting healthy boundaries. God really intervened, and I praise Him for that.”
+        </p>
+        <h3 class="testimonial-name">Rose - 2025</h3>
+      </div>
+    </div>
+
+    <!-- Add more stories here -->
+    
+  </div>
+  <div class="testimonial-nav">
+    <button class="nav-btn prev">❮</button>
+    <button class="nav-btn next">❯</button>
+  </div>
+</section>
+
+<!-- About page — Album Section -->
+<section id="about-album" class="album-section">
+  <h2 class="album-title">Mission Project Photo Album</h2>
+
+  <div class="album-table" role="list">
+    <!-- Single image cell -->
+    <figure class="album-cell" role="listitem" data-caption="Community Outreach — Kitale">
+      <img loading="lazy" src="../images/mission.jpeg" alt="Volunteers with supplies">
+      <figcaption>Community Outreach — Kitale</figcaption>
+    </figure>
+
+    <!-- Double image cell -->
+    <figure class="album-cell double-img" role="listitem" data-caption="Blessing One of the Grannys">
+      <div class="img-wrapper">
+        <img loading="lazy" src="../images/mission1.jpeg" alt="Blessing granny 1">
+        <img loading="lazy" src="../images/Le-Ann.jpeg" alt="Blessing granny 2">
+      </div>
+      <figcaption>Blessing One of the Grannys</figcaption>
+    </figure>
+
+    <!-- Single image -->
+    <figure class="album-cell" role="listitem" data-caption="Youth Bootcamp">
+      <img loading="lazy" src="../images/mission2.jpeg" alt="Youth leadership bootcamp">
+      <figcaption>Happy community</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Women Workshop">
+      <img loading="lazy" src="../images/mission3.jpeg" alt="Women's skills workshop">
+      <figcaption>Women Workshop</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Health Day">
+      <img loading="lazy" src="../images/mission4.jpeg" alt="Community health day">
+      <figcaption>Health Day</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Entrepreneur Showcase">
+      <img loading="lazy" src="../images/mission5.jpeg" alt="Entrepreneurship showcase">
+      <figcaption>Entrepreneur Showcase</figcaption>
+    </figure>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="album-lightbox" class="album-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-inner" tabindex="0">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+</section>
+
+
+<!-- About page — Album Section -->
+<section id="about-album" class="album-section">
+  <h2 class="album-title">Community Health Project Photo Album</h2>
+
+  <div class="album-table" role="list">
+    <!-- Single image cell -->
+    <figure class="album-cell" role="listitem" data-caption="Community Outreach — Kitale">
+      <img loading="lazy" src="../images/mission7.jpeg" alt="Volunteers with supplies">
+      <figcaption>Community Outreach — Kitale</figcaption>
+    </figure>
+
+    <!-- Double image cell -->
+    <figure class="album-cell double-img" role="listitem" data-caption="Blessing One of the Grannys">
+      <div class="img-wrapper">
+        <img loading="lazy" src="../images/mission6.jpeg" alt="Blessing granny 1">
+        <img loading="lazy" src="../images/mission8.jpeg" alt="Blessing granny 2">
+      </div>
+      <figcaption>Blessing One of the Grannys</figcaption>
+    </figure>
+
+    <!-- Single image -->
+    <figure class="album-cell" role="listitem" data-caption="Youth Bootcamp">
+      <img loading="lazy" src="../images/mission9.jpeg" alt="Youth leadership bootcamp">
+      <figcaption>Happy community</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Women Workshop">
+      <img loading="lazy" src="../images/conference5.jpeg" alt="Women's skills workshop">
+      <figcaption>Women Workshop</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Health Day">
+      <img loading="lazy" src="../images/mission11.jpeg" alt="Community health day">
+      <figcaption>Health Day</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Entrepreneur Showcase">
+      <img loading="lazy" src="../images/mission12.jpeg" alt="Entrepreneurship showcase">
+      <figcaption>Entrepreneur Showcase</figcaption>
+    </figure>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="album-lightbox" class="album-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-inner" tabindex="0">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+</section>
+
+<!-- About page — Album Section -->
+<section id="about-album" class="album-section">
+  <h2 class="album-title">Youth Mentorship Project Photo Album</h2>
+
+  <div class="album-table" role="list">
+    <!-- Single image cell -->
+    <figure class="album-cell" role="listitem" data-caption="Community Outreach — Kitale">
+      <img loading="lazy" src="../images/conference.jpeg" alt="Volunteers with supplies">
+      <figcaption>Community Outreach — Kitale</figcaption>
+    </figure>
+
+    <!-- Double image cell -->
+    <figure class="album-cell double-img" role="listitem" data-caption="Blessing One of the Grannys">
+      <div class="img-wrapper">
+        <img loading="lazy" src="../images/conrence1.jpeg" alt="Blessing granny 1">
+        <img loading="lazy" src="../images/confernce2.jpeg" alt="Blessing granny 2">
+      </div>
+      <figcaption>Blessing One of the Grannys</figcaption>
+    </figure>
+
+    <!-- Single image -->
+    <figure class="album-cell" role="listitem" data-caption="Youth Bootcamp">
+      <img loading="lazy" src="../images/mission2.jpeg" alt="Youth leadership bootcamp">
+      <figcaption>Happy community</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Women Workshop">
+      <img loading="lazy" src="../images/conference3.jpeg" alt="Women's skills workshop">
+      <figcaption>Women Workshop</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Health Day">
+      <img loading="lazy" src="../images/conference5.jpeg" alt="Community health day">
+      <figcaption>Health Day</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Entrepreneur Showcase">
+      <img loading="lazy" src="../images/conference4.jpeg" alt="Entrepreneurship showcase">
+      <figcaption>Entrepreneur Showcase</figcaption>
+    </figure>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="album-lightbox" class="album-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-inner" tabindex="0">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+</section>
+
+<!-- About page — Album Section -->
+<section id="about-album" class="album-section">
+  <h2 class="album-title">Women Outreach Project Photo Album</h2>
+
+  <div class="album-table" role="list">
+    <!-- Single image cell -->
+    <figure class="album-cell" role="listitem" data-caption="Community Outreach — Kitale">
+      <img loading="lazy" src="../images/women.jpeg" alt="Volunteers with supplies">
+      <figcaption>Community Outreach — Kitale</figcaption>
+    </figure>
+
+    <!-- Double image cell -->
+    <figure class="album-cell double-img" role="listitem" data-caption="Blessing One of the Grannys">
+      <div class="img-wrapper">
+        <img loading="lazy" src="../images/women1.jpeg" alt="Blessing granny 1">
+        <img loading="lazy" src="../images/womenc1.jpeg" alt="Blessing granny 2">
+      </div>
+      <figcaption>Blessing One of the Grannys</figcaption>
+    </figure>
+
+    <!-- Single image -->
+    <figure class="album-cell" role="listitem" data-caption="Youth Bootcamp">
+      <img loading="lazy" src="../images/womenic2.jpeg" alt="Youth leadership bootcamp">
+      <figcaption>Happy community</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Women Workshop">
+      <img loading="lazy" src="../images/womenc.jpeg" alt="Women's skills workshop">
+      <figcaption>Women Workshop</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Health Day">
+      <img loading="lazy" src="../images/womenm10.jpeg" alt="Community health day">
+      <figcaption>Health Day</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Entrepreneur Showcase">
+      <img loading="lazy" src="../images/womenm12.jpeg" alt="Entrepreneurship showcase">
+      <figcaption>Entrepreneur Showcase</figcaption>
+    </figure>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="album-lightbox" class="album-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-inner" tabindex="0">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+</section>
+
+
+<!-- About page — Album Section -->
+<section id="about-album" class="album-section">
+  <h2 class="album-title">Mission As Business Project Photo Album</h2>
+
+  <div class="album-table" role="list">
+    <!-- Single image cell -->
+    <figure class="album-cell" role="listitem" data-caption="Community Outreach — Kitale">
+      <img loading="lazy" src="../images/businessm.jpeg" alt="Volunteers with supplies">
+      <figcaption>Community Outreach — Kitale</figcaption>
+    </figure>
+
+    <!-- Double image cell -->
+    <figure class="album-cell double-img" role="listitem" data-caption="Blessing One of the Grannys">
+      <div class="img-wrapper">
+        <img loading="lazy" src="../images/businessm1.jpeg" alt="Blessing granny 1">
+        <img loading="lazy" src="../images/businessm2.jpeg" alt="Blessing granny 2">
+      </div>
+      <figcaption>Blessing One of the Grannys</figcaption>
+    </figure>
+
+    <!-- Single image -->
+    <figure class="album-cell" role="listitem" data-caption="Youth Bootcamp">
+      <img loading="lazy" src="../images/businessm3.jpeg" alt="Youth leadership bootcamp">
+      <figcaption>Happy community</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Women Workshop">
+      <img loading="lazy" src="../images/businessm4.jpeg" alt="Women's skills workshop">
+      <figcaption>Women Workshop</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Health Day">
+      <img loading="lazy" src="../images/businessm5.jpeg" alt="Community health day">
+      <figcaption>Health Day</figcaption>
+    </figure>
+
+    <figure class="album-cell" role="listitem" data-caption="Entrepreneur Showcase">
+      <img loading="lazy" src="../images/businessm6.jpeg" alt="Entrepreneurship showcase">
+      <figcaption>Entrepreneur Showcase</figcaption>
+    </figure>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="album-lightbox" class="album-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-inner" tabindex="0">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+</section>
+
 
   <!-- Optional JS file -->
-  <script src="script.js"></script>
+  <script src="impact-stories.js"></script>
 </body>
+<!-- Footer will load here -->
+  <div id="footer"></div>
+
+  <!-- link to the JS file (go up one folder, then into js/) -->
+  <script src="../js/load-partials.js"></script>
+  
 </html>

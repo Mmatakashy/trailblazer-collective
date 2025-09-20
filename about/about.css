@@ -91,43 +91,199 @@ section {
   max-width: 1000px;
   margin: auto;
 }
-
 h2 {
+
   font-size: 50px;
   margin-bottom: 20px;
   color: #1e3a8a;
   text-align: center;
   font-weight: 700;
 }
+section p {
+  font-size: 1.2rem;  /* Larger text for readability */
+  line-height: 1.8;   /* More breathing space between lines */
+  color: #333;        /* Dark gray for a softer look */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1.2em;
+}
+
+section ul {
+  font-size: 1.2rem;  /* Match paragraph size */
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  color: #1e293b; /* Dark navy for contrast */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section ul li {
+  margin-bottom: 0.6em; 
+  position: relative;
+  padding-left: 1.5em;
+}
+
+section ul li::before {
+  content: "✔"; /* Custom checkmark */
+  color: #2563eb; /* Modern blue highlight */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+.what-we-do {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-size: 2.4rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.what-we-do p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.impact-list li {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.impact-list li::before {
+  content: "✔";
+  color: #2563eb;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 6em;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: #f9fafb;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.program-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.program-card h3 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.program-card p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+.team-section {
+  padding: 6rem 3rem;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.team-heading {
+  font-size: 3.4 rem;
+  margin-bottom: 2.5rem;
+  color: #1e3a8a;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .team-card {
-  background-color: rgba(255,255,255,0.85);
-  border: none;
-  padding: 30px 20px;
-  border-radius: 16px;
-  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .team-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;   /* keeps corners slightly rounded but not circular */
-  object-fit: cover;    /* ensures the image fits neatly without distortion */
-  margin-bottom: 15px;
-  border: 3px solid #1e3a8a;
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px; /* square with slightly rounded corners */
+  margin-bottom: 1rem;
+  border: px solid #1e3a8a;
+}
+
+.team-card h3 {
+  font-size: 1.6rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.team-card h4{
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+  
+.team-card .role {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.team-card .bio {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 1rem;
 }
 
 
@@ -140,7 +296,7 @@ h2 {
   margin: 40px 0;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  gap: 20px;
+  gap: 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -150,10 +306,10 @@ h2 {
 }
 
 .testimonial-img {
-  width: 140px;
-  height: 120px;
+  width: 250px;
+  height: 400px;
   object-fit: cover;
-  border: 3px solid #2c3e50;
+  border: 1px solid #2c3e50;
   border-radius: 8px; /* Slightly rounded corners, not a circle */
   flex-shrink: 0;
 }
@@ -173,7 +329,7 @@ h2 {
 .testimonial cite {
   font-weight: bold;
   color: #2c3e50;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 /* Mobile friendly */

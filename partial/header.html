@@ -1,0 +1,260 @@
+<!-- partials/header.html -->
+<!-- Top Header -->
+<div class="top-header">
+  <div class="contact-left">
+    <span><i class="fas fa-envelope"></i> connect@trailblazerscollective.org</span>
+    <span><i class="fas fa-phone"></i> +254 114 881 941</span>
+  </div>
+  <div class="quick-links-right">
+    <a href="../partial/footer.html">Quick Links</a>
+    <a href="#">Login</a>
+    <a href="../faqs/faqs.html">FAQs</a>
+  </div>
+</div>
+
+<!-- Main Nav -->
+<header class="main-header">
+  <!-- put nav links here -->
+</header>
+
+ <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>
+              <img src="../logos/logo5.jpeg" alt="Trailblazers Logo" class="logo-img">
+              Trailblazers Collective
+            </h1>
+          </div>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../current events/current.html">Current Projects</a>
+                
+            <a href="../faqs/faqs.html">FAQs</a>
+            <a href="../contact/contact.html">Contact</a>
+        </nav>
+        <a href="../donate/donate.html" class="cta-btn">DONATE</a>
+
+    </header>
+<!-- News Section -->
+<div class="news-bar">
+  <div class="news-slider">
+    <div class="news-track">
+      
+      <div class="news-item">
+        <span class="news-popup-sup">News!</span>
+        <i class="fas fa-bullhorn"></i>
+        Women's Health Day In Kitale (11th October 2025)
+        <i class="fas fa-bullhorn"></i>
+        <span class="news-popup-sup">News!</span>
+      </div>
+
+      <div class="news-item">
+        <span class="news-popup-sup">News!</span>
+        <i class="fas fa-bullhorn"></i>
+        Women's Classes – (Every Monday: contact for more details of location and times)
+        <i class="fas fa-bullhorn"></i>
+        <span class="news-popup-sup">News!</span>
+      </div>
+
+      <div class="news-item">
+        <span class="news-popup-sup">News!</span>
+        <i class="fas fa-bullhorn"></i>
+        Sewing Station in Rafiki Village - Kitale 
+        <i class="fas fa-bullhorn"></i>
+        <span class="news-popup-sup">News!</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+   
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Top Header Styling */
+.top-header {
+    background-color: #1A252F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-header .contact-left span,
+.top-header .quick-links-right a {
+    margin-right: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.top-header .quick-links-right a:hover {
+    color: #00ffcc;
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+header .logo h1 {
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo-img {
+    height: 2.5rem; /* Adjust based on how big you want the logo */
+    width: auto;
+}
+
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ffcc;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav a:hover {
+    color: #00ffcc; /* Bright turquoise on hover — customize as needed */
+}
+
+header nav a:hover::after {
+    width: 100%;
+    right: 0;
+}
+/* News Bar */
+.news-bar {
+  background-color: #E67E22;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-bottom: 3px solid #D35400;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-track {
+  display: flex;
+  width: max-content;
+  animation: slide 15s linear infinite;
+}
+
+.news-item {
+  min-width: 100%;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+}
+
+.news-bar i {
+  font-size: 1.3em;
+  animation: speaker-pulse 1s infinite;
+  color: #fff;
+}
+
+.news-popup-sup {
+  position: relative;
+  top: -0.3em;
+  font-size: 0.7em;
+  background-color: #ff004c;
+  color: white;
+  padding: 2px 6px;
+  margin: 0 4px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: blink-color-pulse 1.2s infinite;
+  box-shadow: 0 0 6px #ff004c;
+}
+
+/* Animations */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  63% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  96% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes speaker-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes blink-color-pulse {
+  0%, 100% { opacity: 1; background-color: #ff004c; }
+  50% { opacity: 0.6; background-color: #ff3366; }
+}
+  
+  
+  
+/* CTA Button Styling */
+.cta-btn {
+    padding: 0.5rem 1rem;
+    background-color: #E67E22;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #D35400;
+}
+
+</style>

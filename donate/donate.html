@@ -9,21 +9,11 @@
 <body>  
 
   <!-- Header -->
-  <header class="navbar">
-    <div class="logo">Trailblazers Collective</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Current Projects</a></li>
-        <li><a href="stories.html">Impact Stories</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header"></div>
 
   <!-- Main Content -->
   <main>
+    
     <section class="donate-section">
       <h1>Support Our Mission</h1>
       <p class="intro-text">Your donation helps us empower communities and change lives.</p>
@@ -100,7 +90,7 @@
       <!-- Payment Options -->
       <div class="payment-options">
         <h2>Other Ways to Give</h2>
-       <button class="secondary-btn" onclick="window.location.href='https://www.paypal.com/donate?business=mosesmmata70@gmail.com'">
+       <button class="payment-btn paypal-btn" id="paypal-btn">💳 Pay with PayPal</button>
     Donate via PayPal
 </button>
 
@@ -111,8 +101,12 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Trailblazers Collective</p>
-    <p>Contact: connect@trailblazerscollective.org | +254 700 000000</p>
+   <!-- Footer will load here -->
+  <div id="footer"></div>
+
+  <!-- link to the JS file (go up one folder, then into js/) -->
+  <script src="../js/load-partials.js"></script>
+  
   </footer>
 
   <script src="donate.js"></script>
