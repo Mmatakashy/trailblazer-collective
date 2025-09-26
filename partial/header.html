@@ -42,27 +42,20 @@
     <div class="news-track">
       
       <div class="news-item">
-        <span class="news-popup-sup">News!</span>
-        <i class="fas fa-bullhorn"></i>
+        
         Women's Health Day In Kitale (11th October 2025)
-        <i class="fas fa-bullhorn"></i>
-        <span class="news-popup-sup">News!</span>
+        
       </div>
 
       <div class="news-item">
-        <span class="news-popup-sup">News!</span>
-        <i class="fas fa-bullhorn"></i>
-        Women's Classes – (Every Monday: contact for more details of location and times)
-        <i class="fas fa-bullhorn"></i>
-        <span class="news-popup-sup">News!</span>
+                Women's Classes – (Every Monday: contact for more details of location and times)
+        
       </div>
 
       <div class="news-item">
-        <span class="news-popup-sup">News!</span>
-        <i class="fas fa-bullhorn"></i>
+        
         Sewing Station in Rafiki Village - Kitale 
-        <i class="fas fa-bullhorn"></i>
-        <span class="news-popup-sup">News!</span>
+        
       </div>
 
     </div>
@@ -127,9 +120,24 @@ header .logo h1 {
     align-items: center;
     gap: 0.5rem;
 }
+/* Logo images */
 .logo-img {
-    height: 2.5rem; /* Adjust based on how big you want the logo */
-    width: auto;
+  width: 100px;           /* bigger size */
+  height: 100px;          /* make it square */
+  border-radius: 50%;     /* makes it round */
+  object-fit: cover;      /* fills the circle nicely */
+  background: #fff;       /* clean background */
+  padding: 8px;           /* spacing inside the circle */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto;         /* center align inside parent */
+}
+
+/* Hover effect */
+.logo-img:hover {
+  transform: scale(1.12) rotate(3deg);  /* zoom + slight tilt */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 

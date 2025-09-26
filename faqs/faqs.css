@@ -101,6 +101,62 @@ body{
   color: var(--brand);
   margin: 1.4rem 0 .8rem;
 }
+.donate-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #710101, #2e13f8);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.donate-link:hover {
+  background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.donate-text-link {
+  color: #e63946; /* a modern accent color */
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.donate-text-link:hover {
+  color: #d62828;
+  border-bottom: 2px solid #d62828;
+}
+
+.involved-link {
+  color: #1d3557; /* deep blue for trust */
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.involved-link:hover {
+  color: #457b9d;
+  border-bottom: 2px solid #457b9d;
+}
+
+.policy-link {
+  color: #006d77; /* calm professional teal */
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.policy-link:hover {
+  color: #004c4c;
+  border-bottom: 2px solid #004c4c;
+}
 
 /* Details/Accordion */
 details{

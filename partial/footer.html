@@ -37,7 +37,7 @@
     <!-- Donate button -->
     <div class="partner-item donate-box">
       <a href="../donate/donate.html" class="cta-btn">DONATE</a>
-   <a href="../partners/partner.html" class="cta-btn partner-btn">Be Our Partner!</a>
+   <a href="../partners/partner.html" class="cta-btn partner-btn">Get Involved!</a>
 
     </div>
   </div>
@@ -51,7 +51,7 @@
     <p><i class="fas fa-phone"></i> +254 114 881 941</p>
     <p><i class="fas fa-envelope"></i> connect@trailblazerscollective.org</p>
     <p><i class="fas fa-map-marker-alt"></i> P.O BOX 4141–30200 Kitale, Kenya</p>
-    
+    <!--
     <div class="social-icons">
       <h3></h3>
   <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -59,7 +59,7 @@
   <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
   <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
 </div>
-
+-->
   </div>
 
   <!-- Useful Links -->
@@ -68,8 +68,8 @@
     <ul>
       <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@trailblazerscollective.org" target="_blank">Email Us</a></li>
     <li><a href="../donate/donate.html">Donation</a></li>
-      <li><a href="../current events/current.html">Our Program</a></li>
-      <li><a href="../partners/partner.html">Be Our Partner!</a></li>
+      <li><a href="../current events/current.html">Our Current Projects</a></li>
+      <li><a href="../partners/partner.html">Get Involved</a></li>
     </ul>
   </div>
 
@@ -151,19 +151,22 @@ footer {
 
 /* Logo images */
 .partner-item img {
-  max-width: 160px;  /* grow size */
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
+  width: 180px;          /* fixed width */
+  height: 80px;         /* fixed height */
+  object-fit: contain;   /* keeps aspect ratio inside box */
+  border-radius: 12px;
+  background: #fff;      /* white background to balance transparent logos */
+  padding: 10px;         /* spacing so logos don’t touch edges */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Hover zoom */
+/* Hover zoom effect */
 .partner-item img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
+
 
 /* Partner names (below images) */
 .partner-item p {

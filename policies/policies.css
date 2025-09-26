@@ -1,0 +1,60 @@
+/* Privacy Policy Section */
+.privacy-policy {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #460202, #032500);
+  color: #ffffff;
+  text-align: center;
+}
+
+.privacy-policy h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #0055ff;
+  text-shadow: 0 0 8px rgba(0, 85, 255, 0.3);
+}
+
+.policy-intro {
+  font-size: 1.2rem;    
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.policy-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: left;
+  max-height: 500px; /* scrollable */
+  overflow-y: auto;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  color: #000; /* black text */
+}
+
+.policy-box h3 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0055ff;
+}
+
+.policy-box p {
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Scrollbar styling */
+.policy-box::-webkit-scrollbar {
+  width: 10px;
+}
+.policy-box::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+.policy-box::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0055ff, #00aaff);
+  border-radius: 10px;
+}
